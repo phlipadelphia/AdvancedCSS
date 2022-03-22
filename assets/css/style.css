@@ -1,14 +1,270 @@
-:root {
-   --dark: #grey;
-   --light: #green;
-   --nav-color: #pink;
+* {
+    box-sizing: border-box;
 }
 
-h2 {
-    margin: 2% 0;
-    font-size: 250%;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #333333;
 }
 
-nav a:hover {
-    color: var(--nav-color);
+header {
+    padding: 50px;
+    text-align: center;
+    background: #333333;
+    color: rgb(127, 201, 78);
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    background: #333333;
+}
+
+button {
+    width: 200px;
+    margin: 0 .5%;
+    font-size: 150%;
+    color: rgb(127, 201, 78);
+    border: 3px solid rgb(127, 201, 78);
+    background: #333333;
+}
+
+button:hover {
+    background-color: rgb(127, 201, 78); 
+    color: #333333;
+    border-color: #333333;
+    border-style: dotted;
+}
+
+nav a {
+    color: rgb(127, 201, 78);
+    background-color: #333333;  
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+aside {
+    flex: 30%;
+    background-color: #333333;
+    text-align: center;
+    color: rgb(127, 201, 78);
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+section {
+    width: 70%;
+    margin: 20px auto;
+    flex: 70%;
+    background-color: #333333;
+    color: rgb(127, 201, 78);
+    padding: 30px; 
+}
+
+.AboutImg {
+    background-color: #333333;
+    width: 100%;
+    padding: 20px;
+    height: 45%;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+footer {
+    padding: 35px;
+    text-align: center;  
+    background-color: #333333;
+    color: rgb(127, 201, 78); 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.tbdphotos {
+    /* width: 30%; */
+    height: 20%;
+    margin: 0 .5;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/* Parent Container */
+.thisphoto {
+    position: relative;
+    /* width: 200px; */
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+    flex: 0 1 50%; 
+}
+
+.thatphoto {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+}
+
+.razzphoto {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+    flex: 0 1 50%; 
+}
+
+.dazzphoto {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+}
+
+.image-hover {
+    position: relative;
+    width: 175px;
+    height: 175px;
+    float: left;
+    margin-right: 10px;
+}
+
+/*Child Text Container */
+.this {
+   position: absolute;
+    bottom: 0;
+    right: 0px;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    margin-right: 71%;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.that {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.razzle {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    margin-right: 70%;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.dazzle {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    background: black;
+    color: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.thisphoto:hover{
+    cursor: pointer;
+}
+
+.thatphoto:hover{
+    cursor: pointer;
+}
+
+.razzphoto:hover{
+    cursor: pointer;
+}
+
+.dazzphoto:hover{
+    cursor: pointer;
+}
+
+.thisphoto:hover .this{
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7;
+}
+
+.thatphoto:hover .that{
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7;
+}
+
+.razzphoto:hover .razzle{
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7;
+}
+
+.dazzphoto:hover .dazzle{
+    width: 150px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7;
+}
+
+.image-padding {
+    padding: 20px;
+    background-color: rgb(127, 201, 78);
+}
+
+.image-border {
+    border: 10px solid darkgreen;
+}
+
+.image-margin {
+    margin: 20px;
+}
+
+.links {
+    text-align: center;
+}
+
+.social {
+    text-align: center;
+}
+
+
+
+
+
+
